@@ -31,10 +31,7 @@ This is the folder structure
 │   │   ├── glyphicons-halflings-regular.woff
 │   │   └── glyphicons-halflings-regular.woff2
 │   └── js
-│       ├── angular.min.js
-│       ├── bootstrap.min.js
 │       ├── index.js
-│       └── jquery.min.js
 ├── README.md
 ├── routes
 │   ├── index.js

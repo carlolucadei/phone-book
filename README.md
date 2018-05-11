@@ -64,3 +64,18 @@ The phone book structure is quite simple and it is describe below:
 ```
 
 It will be placed in the *phonebook.json* file
+
+# How To
+
+Install dependencies executing
+
+```
+user@device:/phone-book$ npm install
+user@device:/phone-book$ bower install
+```
+
+then run the application
+
+```
+user@device:/phone-book$ npm start
+```

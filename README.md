@@ -17,8 +17,20 @@ This is the folder structure
 ├── phonebook.json
 ├── public
 │   ├── css
+│   │   ├── bootstrap.min.css
 │   │   └── style.css
+│   ├── fonts
+│   │   ├── glyphicons-halflings-regular.eot
+│   │   ├── glyphicons-halflings-regular.svg
+│   │   ├── glyphicons-halflings-regular.ttf
+│   │   ├── glyphicons-halflings-regular.woff
+│   │   └── glyphicons-halflings-regular.woff2
+│   ├── images
 │   └── js
+│       ├── angular.min.js
+│       ├── bootstrap.min.js
+│       ├── index.js
+│       └── jquery.min.js
 ├── routes
 │   ├── index.js
 │   └── users.js

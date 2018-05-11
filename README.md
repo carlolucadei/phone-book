@@ -9,10 +9,15 @@ I added only a way to run / save and update the contact info.
 
 This is the folder structure
 ```
-├── README.md
 ├── app.js
 ├── bin
 │   └── www
+├── bower_components
+│   ├── angular
+│   ├── bootstrap
+│   ├── jquery
+│   └── lodash
+├── bower.json
 ├── package.json
 ├── phonebook.json
 ├── public
@@ -25,12 +30,12 @@ This is the folder structure
 │   │   ├── glyphicons-halflings-regular.ttf
 │   │   ├── glyphicons-halflings-regular.woff
 │   │   └── glyphicons-halflings-regular.woff2
-│   ├── images
 │   └── js
 │       ├── angular.min.js
 │       ├── bootstrap.min.js
 │       ├── index.js
 │       └── jquery.min.js
+├── README.md
 ├── routes
 │   ├── index.js
 │   └── users.js

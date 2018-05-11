@@ -1,0 +1,23 @@
+{
+  "name": "phone-book",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Carlo Lucadei"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/carlolucadei/phone-book",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "angular": "1.4.6",
+    "bootstrap": "boostrap#3.3.4",
+    "jquery": "3.3.1"
+  }
+}

@@ -1,7 +1,9 @@
-var _ = require('lodash')
 var app = angular.module("addrBook", []);
 app.controller("myCtrl", function ($scope, $http) {
-    $scope.info = [];
+    $scope.info = [{
+        name: 'Jerry',
+        tel: '012-345-6789'
+    }];
     $scope.addMe = function () {
         return {
             name: $scope.newName,

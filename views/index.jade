@@ -1,5 +1,47 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  body(ng-app='addrBook', ng-controller='myCtrl')
+    .container
+      .panel.panel-info
+        .panel-heading
+          .panel-title
+            h3.text-center Phone Book
+          form.form-horizontal
+            .form-group.has-info.has-feedback
+              label.col-sm-2.control-label(for='seacrh') Search: 
+              .col-sm-5
+                input.form-control(type='text', name='search', ng-model='test')
+                span.glyphicon.glyphicon-search.form-control-feedback
+          .table-responsive
+            table.table.table-striped
+              thead
+                tr
+                  th Contacts
+                  th Phone Number
+                  th Handle
+              tbody
+                tr(ng-repeat='x in info | filter:test')
+                  td
+                    span(ng-hide='showMe($index)') {{x.name}}
+                    input.form-control.input-sm(text='text', ng-model='x.name', ng-show='showMe($index)')
+                  td
+                    span(ng-hide='showMe($index)') {{x.tel}}
+                    input.form-control.input-sm(text='text', ng-model='x.tel', ng-show='showMe($index)')
+                  td
+                    a(href='#', ng-click='removeItem()')
+                      span.glyphicon.glyphicon-trash
+                    | /
+                    a(href='#', ng-click='change()', ng-hide='showMe($index)')
+                      span.glyphicon.glyphicon-edit
+                    a(href='#', ng-click='save()', ng-show='showMe($index)')
+                      span.glyphicon.glyphicon-ok
+        .panel-footer
+          form.form-inline
+            .form-group
+              span Name&#xFF1A;
+              input.form-control(type='text', ng-model='newName')
+            .form-group
+              span Tel&#xFF1A;
+              input.form-control(type='text', ng-model='newTel')
+            input.btn.btn-primary.btn-sm(type='button', value='Add', ng-click='addItem()')

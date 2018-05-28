@@ -1,9 +1,20 @@
 var app = angular.module("addrBook", []);
 app.controller("myCtrl", function ($scope, $http) {
-    $scope.info = [{
-        name: 'Jerry',
-        tel: '012-345-6789'
-    }];
+    $scope.info = [];
+    $http.get("/users/phonebook")
+        .success(function (response) {
+            $scope.info = response;
+        });
+
+    function update() {
+        $http.put("/users/phonebook", { data: $scope.info })
+            .success(function () {
+            })
+            .error(function () {
+                alert("an error occurred while saving...")
+            })
+    }
+
     $scope.addMe = function () {
         return {
             name: $scope.newName,
@@ -19,10 +30,12 @@ app.controller("myCtrl", function ($scope, $http) {
             }
         }
         $scope.info.push($scope.addMe());
+        update();
     }
 
     $scope.removeItem = function () {
         $scope.info.splice(this.$index, 1)
+        update();
     }
     $scope.change = function () {
         index = this.$index;
@@ -39,5 +52,6 @@ app.controller("myCtrl", function ($scope, $http) {
                 return false;
             }
         }
+        update()
     }
 })
